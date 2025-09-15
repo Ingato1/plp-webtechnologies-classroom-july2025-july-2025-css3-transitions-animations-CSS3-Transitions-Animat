@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Button Hover Effect using Transition */
+.interactive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    /* transition property combines all transition effects into one line */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.interactive-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Continuous Keyframe Animation */
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    margin-top: 20px;
+    /*
+        animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode];
+        Here we're using a simple name, duration, and infinite count.
+    */
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* Defining the keyframes for the bouncing effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* CSS class for triggered animation (to be used with JS) */
+.flash {
+    animation: flash 0.5s ease;
+}
+
+/* Keyframes for the flash effect */
+@keyframes flash {
+    0% { background-color: #f6b3b3; }
+    50% { background-color: #ff6347; }
+    100% { background-color: #f6b3b3; }
+}
